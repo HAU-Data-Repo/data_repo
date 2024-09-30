@@ -182,6 +182,49 @@ height: 100%;
     width: 100%;
 }
 
+/*Footer*/
+
+.footer {
+    padding: 40px 0;
+}
+
+.footer h4{
+    margin-bottom: 10px;
+}
+
+.footer ul li{
+    line-height: 2.5;
+}
+
+.footer a {
+    color: #ccc
+}
+.footer i {
+    font-size: 1.5rem;
+    margin-right: 10px;
+}
+
+.footer-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    gap: 30px;
+    justify-content: center;
+    align-items:flex-start;
+}
+
+.footer .card {
+    margin: 20px 30px 30px 0;
+}
+
+.footer input[type='email'] {
+    width:1005;
+    padding: 10px;
+    border: 1px slid #ccc;
+    border-radius: 5px;
+    margin: 20px 0;
+
+}
+
 /*Utility styles*/
 /*Containers*/
 
