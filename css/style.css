@@ -1,0 +1,375 @@
+/*Reset*/
+
+* {
+    box-sizing: border-box; /* Means that when we add margin or padding it doesn't affect things*/
+    margin: 0;
+    padding:0
+}
+
+/*Root styling*/
+
+:root{
+    --colour-brandblue: rgb(0, 47, 108);
+	--colour-brand1: #2C2321;
+	--colour-brand2: rgb(255,232,0); /* Harper yellow */
+	--colour-brand3: #9DAB34;
+	--colour-brand4: rgb(87,44,95); /* Aubergine */
+	--colour-brand5: rgb(35,47,132);
+	--colour-brand6: rgb(203,211,0);
+	--colour-brand7: rgb(0,68,19);
+	--colour-brand8: rgb(83,207,186); /* Aqua */
+	--colour-brand9: rgb(162,229,210);
+	--colour-brand10: #252628;
+	--colour-brand11: rgb(0,160,175);
+	--colour-brand12: rgb(0,48,64);
+	--colour-brand13: #C0D7B0; /*Ag1 */
+	--colour-brand14: #79B060; /* Ag2 */
+	--colour-brand15: #FFAB82; /* CEWG1 */
+	--colour-brand16: #FF5704; /* CEWG2 */
+	--colour-brand17: #F3977C; /* Animals1 */
+	--colour-brand18: #FACEBD; /* Animals2 */
+	--colour-brand19: #582A55; /* Business1 */
+	--colour-brand20: #A0859E; /* Business2 */
+	--colour-brand21: #002F87; /* Engineering1 */
+	--colour-brand22: #7F97C3; /* Engineering2 */
+	--colour-brand23: #FFCE00; /* Food1 */
+	--colour-brand24: #FFE67F; /* Food2 */
+	--colour-brand25: #EB5B6A; /* REALM1 */
+	--colour-brand26: #F6B5B4; /* REALM2 */
+	--colour-brand27: #8DB8BA; /* VN1 */
+	--colour-brand28: #C6DBDC; /* VN2 */
+	--colour-brand29: #5F4595; /* Physio1 */
+	--colour-brand30: #AB9DCD; /* Physio2 */
+	--colour-brand31: #BAAEA9; /* Zoology1 */
+	--colour-brand32: #AA9C95; /* Zoology2 */	
+	--colour-brand33: rgb(218,218,218); /* Gray */
+	--colour-brand-slate: rgb(29,37,45);
+}
+
+
+/* Base Selector Styles*/
+body {
+    font-family: 'Poppins', sans-serif;
+    font-size: 16px;
+    line-height: 1.5;
+    background-color: white;
+    overflow-x: hidden;
+}
+
+a {
+    text-decoration: none;
+    color: #fff;
+}
+
+ul {
+    list-style: none;
+}
+
+img {
+    max-width: 100%;
+}
+
+/* Navbar */ 
+
+.navbar {
+    background: var(--colour-brandblue);
+    padding: 20px;
+}
+
+.navbar .logo {
+    width: 200px;
+    padding: 0 0;
+}
+
+.navbar .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.navbar .main-menu ul {
+display: flex;
+}
+
+.navbar ul li a {
+    padding: 10px 20px;
+    display: block;
+    font-weight: 600;
+    transition: 0.5s;
+}
+
+.navbar ul li a:hover {
+    color: var(--colour-brand23);
+}
+.navbar ul li a i{
+    margin-right: 10px;
+}
+.navbar ul li:last-child {
+    margin-left: 10px;
+}
+
+/* Hero */
+
+.hero {
+    background: url(../images/hero-image.jpg) no-repeat;
+    background-size: cover;
+    height:500px;
+    background-position: bottom;
+    margin: 0;
+}
+
+.hero .container{
+display: grid;
+grid-template-columns: 1fr;
+/*grid-template-rows: 2fr 1fr;*/
+justify-content: center;
+align-items: center;
+background-color: rgba(0,0,0, 0.3);
+height: 100%;
+}
+
+.hero .hero-content {
+    width: 100%;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    color: #fff;
+    background-color: rgba(0,0,0, 0.5);
+}
+
+.hero .hero-text {
+    width: 100%;
+    text-align: center;
+}
+
+/*Data categories*/
+
+.data-categories {}
+
+.data-cat-heading {
+    text-align: center;
+}
+
+
+
+.data-categories .data-cat-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: 1fr 1fr;
+    gap:30px;
+    margin: 30px;
+}
+
+.data-categories .data-cat-grid .card {
+    display: grid;
+    grid-template-rows: 2fr 0.5fr;
+    position: relative
+}
+
+.data-categories .data-cat-grid .card:hover {
+    background: var(--colour-brand21);
+    color: #fff;
+    transition: 0.5s;
+}
+
+.data-categories .data-cat-grid .card .card-link {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+}
+
+/*Utility styles*/
+/*Containers*/
+
+.container {
+    max-width: 100%;
+    margin: 0 auto;
+    padding: 0 15px;
+}
+
+.container-sm{
+    max-width: 800;
+    margin: 0 auto;
+    padding: 0 15px
+}
+
+/* Card */
+
+.card {
+    background: #fff;
+    color: #000;
+    border-radius: 10px;
+    padding: 20px;
+}
+
+/*Buttons*/
+
+.btn {
+    display: inline-block;
+    padding: 13px 20px;
+    background-color: var(--light-color);
+    color: #333;
+    font-weight: 600;
+    text-decoration: none;
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+    text-align: center;
+    transition: 0.5s;
+}
+
+.btn:hover{
+    opacity: 0.8;
+}
+
+.btn-primary{
+    background-color: var(--primary-color);
+    color: white;
+}
+
+.btn-dark{
+    background-color: var(--dark-color);
+    color: white;
+}
+
+.btn-light{
+    background-color: var(--light-color);
+    color: white;
+}
+
+.btn-block {
+    display: block;
+    width:100%;
+}
+
+.btn i {
+    margin-right: 10px;
+}
+
+/*Text classes*/
+
+.text-xxl {
+    font-size: 3rem;
+    line-height: 1.2;
+    font-weight: 600;
+    margin: 40px 0 20px;
+}
+
+.text-xl {
+    font-size: 2.2rem;
+    line-height: 1.4;
+    font-weight: normal;
+    margin: 40px 0 20px;
+}
+
+.text-lg {
+    font-size: 1.8rem;
+    line-height: 1.4;
+    font-weight: normal;
+    margin: 30px 0 20px;
+}
+
+.text-md {
+    font-size: 1.2rem;
+    line-height: 1.4;
+    font-weight: normal;
+    margin: 20px 0 10px;
+}
+
+.text-sm {
+    font-size: 0.9rem;
+    line-height: 1.4;
+    font-weight: normal;
+    margin: 10px 0 5px;
+}
+
+.text-center {
+    text-align: center;
+}
+
+
+
+/*Background*/
+
+.bg-primary{
+    background: var(--primary-color);
+    color: white;
+}
+
+.bg-light{
+    background: var(--light-color);
+    color: #333;
+}
+
+.bg-dark{
+    background: var(--dark-color);
+    color: white;
+}
+
+.bg-black{
+    background: #000;
+    color: #fff;
+}
+
+.bg-blue{
+    background: var(--colour-brand21);
+    color: #fff;
+}
+
+.bg-grey {
+    background: var(--colour-brand33);
+}
+
+/*Hamburger button*/
+.hamburger-button {
+    display: none;
+    background: none;
+    border: none;
+    cursor: pointer;
+    padding: 10px;
+    z-index: 1000;
+}
+
+
+.hamburger-button .hamburger-line {
+width: 30px;
+height: 3px;
+background: #333;
+margin: 6px 0;
+}
+
+/*Mobile menu*/
+
+.mobile-menu {
+    position: fixed;
+    top: 0;
+    right: -300px;
+    width: 250px;
+    height:100%;
+    z-index: 100;
+    background: white;
+    box-shadow: 0px opx 10px rgba(0,0,0,0.2);
+    transition: right 0.3s ease-in-out;
+}
+
+.mobile-menu.active{
+    right: 0;
+}
+
+.mobile-menu ul{
+    margin-top: 100px;
+    padding-right: 10px;
+}
+
+.mobile-menu ul li{
+    margin: 10px 0;
+}
+
+.mobile-menu ul li a{
+    font-size: 20px;
+    transition: 0.3s;
+}
