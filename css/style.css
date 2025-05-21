@@ -213,65 +213,7 @@ height: 100%;
     width: 100%;
 }
 
-/*LTE pages css*/
-.lte-metadata-container{}
 
-.lte-metadata-container  {
-    display: grid;
-    grid-template-columns: 1fr;
-    gap: 30px;
-    margin: 30px;
-}
-
-.lte-metadata-container h2 {
-    margin-bottom: 0.5rem;
-}
-
-.lte-metadata-container .lte-metadata-table dl {
-    display: grid;
-    grid-template-columns: 1fr 3fr;
-    margin-top: 0;
-    margin-bottom: 1rem;
-    margin-left: 5rem;
-    margin-right: 5rem;
-}
-
-
-.lte-metadata-container .lte-metadata-table dt {
-    font-weight: 700;
-    margin-bottom: 0.5rem;;
-}
-
-
-.lte-metadata-container .lte-metadata-table dd {
-    margin-inline-start: 40px;
-    margin-bottom: 1.5rem;;
-}
-thead th {
-    text-align: left;
-}
-thead td{
-    padding-left: 2rem;
-    font-weight: bold;
-}
-tbody th {
-    text-align: left;
-    font-weight: normal;
-}
-tbody td {
-    padding-left: 2rem;
-    font-weight: normal;
-    font-style: italic;
-}
-
-/*Contact page css*/
-
-.contact-container {
-    display: grid;
-    grid-template-columns: 1fr 1fr 1fr;
-    gap: 30px;
-    margin: 30px;
-}
 
 /*Footer*/
 
@@ -290,46 +232,38 @@ tbody td {
 .footer a {
     color: #ccc
 }
-.footer i {
-    font-size: 1.5rem;
-    margin-right: 10px;
-}
+
 
 .footer-grid {
     display: grid;
-    grid-template-columns: 1fr 1fr 1fr 1fr;
+    grid-template-columns: 1fr 1fr 1fr;
     gap: 30px;
     justify-content: center;
     align-items:flex-start;
 }
 
 .footer .card {
-    margin: 20px 30px 30px 0;
-}
-
-.dashboard {
-    background-color: white;
-    display: grid;
-    grid-template-columns: 1fr 8fr;
-}
-/*Sidebar*/
-.db-sidebar {
-    background-color: var(--colour-brandblue);
-    padding: 10px 20px;
-}
-
-.db-sidebar h3 {
+    margin: 20px 30px 20px 10px;
+    background-color: var(--colour-brand21);
     color: #fff;
+}
+
+
+.footer a:hover{
+    color: var(--colour-brand23)
+}
+
+
+footer a i {
     font-size: 1.5rem;
-    margin-bottom: 20px;
+    color: #fff;
+    margin: 10px;
+    transition: color 0.3s;
 }
 
-.dashboard .db-sidebar .db-sidebar-list {
-    padding-top: 10px;
-    padding-bottom: 10px;
+footer a:hover i {
+    color: var(--colour-brand23)
 }
-
-
 
 /*Utility styles*/
 /*Containers*/

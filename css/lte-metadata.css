@@ -1,0 +1,50 @@
+/*LTE pages css*/
+.lte-metadata-container{}
+
+.lte-metadata-container  {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 30px;
+    margin: 30px;
+}
+
+.lte-metadata-container h2 {
+    margin-bottom: 0.5rem;
+}
+
+.lte-metadata-container .lte-metadata-table dl {
+    display: grid;
+    grid-template-columns: 1fr 3fr;
+    margin-top: 0;
+    margin-bottom: 1rem;
+    margin-left: 5rem;
+    margin-right: 5rem;
+}
+
+
+.lte-metadata-container .lte-metadata-table dt {
+    font-weight: 700;
+    margin-bottom: 0.5rem;;
+}
+
+
+.lte-metadata-container .lte-metadata-table dd {
+    margin-inline-start: 40px;
+    margin-bottom: 1.5rem;;
+}
+thead th {
+    text-align: left;
+}
+thead td{
+    padding-left: 2rem;
+    font-weight: bold;
+}
+tbody th {
+    text-align: left;
+    font-weight: normal;
+}
+tbody td {
+    padding-left: 2rem;
+    font-weight: normal;
+    font-style: italic;
+}
