@@ -7,24 +7,23 @@
 
     <!--Title and ico-->
     <title>HAU Data Repository</title>
-    <link rel="shortcut icon" href="../../images/hau-logo.ico" />
+    <link rel="shortcut icon" href="../images/hau-logo.ico" />
     <!-- Fonts and styling-->
     <!-- Font Awesome -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
     <link rel="stylesheet" href="./assets/css/fontawesome.min.css" />
     <link rel="stylesheet" href="./assets/css/brands.min.css" />
 
-    <link rel="stylesheet" href="../../css/style.css" />
-    <link rel="stylesheet" href="../../css/utilities.css" />
-    <link rel="stylesheet" href="../../css/responsive.css" />
-    <link rel="stylesheet" href="../../css/pages/lte_projects.css" />
+    <link rel="stylesheet" href="../css/style.css" />
+    <link rel="stylesheet" href="../css/utilities.css" />
+    <link rel="stylesheet" href="../css/responsive.css" />
   </head>
 
   <body>
     <!--navbar include -->
     <div id="header"></div>
     <script>
-      fetch("../../partials/header.html")
+      fetch("../partials/header.html")
         .then((res) => res.text())
         .then((html) => {
           const header = document.getElementById("header");
@@ -46,23 +45,23 @@
 
     <main>
       <!-- Hero -->
-      <section class="hero">
+      <section class="hero hero-biodiversity">
         <div class="container">
-          <div class="hero-content">
-            <h1 class="hero-heading text-xxl text-center">Traffic and Tillage</h1>
+          <div class="hero-content text-center">
+            <h1 class="text-xxl mb-3">Harper Adams Farm Networks</h1>
           </div>
         </div>
       </section>
-      <!-- Main content -->
+
+      
     </main>
+
     <!-- Footer include -->
     <div id="footer"></div>
     <script>
-      fetch("../../partials/footer.html")
+      fetch("../partials/footer.html")
         .then((res) => res.text())
         .then((html) => (document.getElementById("footer").innerHTML = html));
     </script>
-    <!--JS scripts-->
-    <script></script>
   </body>
 </html>

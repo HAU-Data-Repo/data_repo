@@ -1,159 +1,118 @@
 <!DOCTYPE html>
-<html>
-<head>
-<!--Metadata-->
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Explore the Future Farm Data & See What You Can Discover">
-    <meta name="keywords" content="Future Farm, Harper Adams University, Data Portal, Data Repository">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+<html lang="en">
+  <head>
+    <!-- Metadata -->
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="Explore the Future Farm Data & See What You Can Discover" />
+    <meta name="keywords" content="Future Farm, Harper Adams University, Data Portal, Data Repository" />
 
-    <link rel="stylesheet" href="./assets/css/fontawesome.min.css">
-    <link rel="stylesheet" href="./assets/css/brands.min.css">
-<!--Title and icon-->
+    <!-- Title and Icon -->
     <title>HAU Data Repository</title>
-    <link rel="shortcut icon" href="./images/hau-logo.ico">
-<!-- Fonts and styling-->
-    <link rel="stylesheet" href="../css/style.css">
+    <link rel="shortcut icon" href="./images/hau-logo.ico" />
 
-</head>
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
+    <link rel="stylesheet" href="./assets/css/fontawesome.min.css" />
+    <link rel="stylesheet" href="./assets/css/brands.min.css" />
 
-<body>
-    
-<!-- Nav bar-->
-<nav class="navbar">
-    <div class="container">
-        <div class="logo">
-            <a href="index.html"></a>
-            <img src="./images/HAU-logo.svg" alt="">
-        </div>
-        <div class="main-menu">
-            <ul>
-                <li>
-                    <a href="index.html">Home</a>
-                </li>
+    <!-- CSS -->
+    <link rel="stylesheet" href="./css/style.css" />
+    <link rel="stylesheet" href="./css/utilities.css" />
+    <link rel="stylesheet" href="./css/responsive.css" />
+  </head>
+  <body>
+    <!--navbar include -->
+    <div id="header"></div>
+    <script>
+      fetch("./partials/header.html")
+        .then((res) => res.text())
+        .then((html) => {
+          const header = document.getElementById("header");
+          header.innerHTML = html;
 
-                <li>
-                    <a href="./contribute.html">Contribute</a>
-                </li>
-                <li>
-                    <a href="./faq.html">FAQ</a>
-                </li>
-            </ul>
-        </div>
-        <!--Hamburger button menu-->
-    </div>
-</nav>
-<!-- Hero -->
-<section class="hero">
-    <div class="container">
-        <div class="hero-content">
-            <h1 class="hero-heading text-xxl text-center">Harper Adams Future Farm Data Portal</h1>
-            <p class="hero-text text-md text-center">Explore the Future Farm Data & See What You Can Discover </p>
-        </div>
-    </div>
-</section> 
+          // Manually load navbar.js after HTML is injected
+          const script = document.createElement("script");
+          script.src = "./js/navbar.js";
+          script.onload = function () {
+            if (typeof initDropdownNav === "function") {
+              initDropdownNav();
+            } else {
+              console.error("initDropdownNav is not defined.");
+            }
+          };
+          document.body.appendChild(script);
+        });
+    </script>
 
-<!-- Data categories -->
-<section class="data-categories">
-    <div class="container">
-        <h3 class="data-cat-heading text-xl">Explore our data</h3>
-    </div>
-    <div class="data-cat-grid">
-        <div class="card ">
-            <img src="./images/Crops-header.jpg" alt="" class="card-img">
-            <p class="text-lg text-center">Farm Data</p>
-            <a href="https://harperadams.farmmetrics.net/app/login?returnUrl=%2Fdashboard" target = "_blank" class='card-link'></a>
+    <main>
+      <!-- Hero -->
+      <section class="hero">
+        <div class="container">
+          <div class="hero-content text-center">
+            <h1 class="text-xxl mb-2">Harper Adams Future Farm Data Portal</h1>
+            <p class="text-md">Explore the Future Farm Data & See What You Can Discover</p>
+          </div>
         </div>
-        <div class="card ">
-            <img src="./images/soils.jpg" alt="" class="card-img">
-            <p class="text-lg text-center">Carbon</p>
-            <a href="https://hacarbon.github.io/dash/index.html#" target="_blank" class='card-link'></a>
-        </div>
-        <div class="card ">
-            <img src="./images/HAU GR 3_00_20250305183508.jpg" alt="" class="card-img">
-            <p class="text-lg text-center">Biodiversity</p>
-            <a href="./pages/biodiversity.html" class='card-link'></a>
-        </div>
-        <div class="card">
-            <img src="./images/combine.jpeg" alt="" class="card-img">
-            <p class="text-lg text-center">Long-term Experiments</p>
-            <a href="./pages/lte_exp.html" class='card-link'></a>
-        </div>
-        <div class="card ">
-            <img src="./images/trials picture 2.jpeg" alt="" class="card-img">
-            <p class="text-lg text-center">Harper Data Verse</p>
-            <a href="https://dataverse.harvard.edu/dataverse/Agridat" target="_blank" class='card-link'></a>
-        </div>
-        <div class="card ">
-            <img src="./images/Student-outdoor-lecture.jpg" alt="" class="card-img">
-            <p class="text-lg text-center">Farm Networks</p>
-            <a href="#" class='card-link'></a>
-        </div>
-    </div>
-    
-</section>
-<!-- Footer -->
-<footer class="footer bg-blue">
-    <div class="container">
-        <div class="footer-grid">
-            <div class="card">
-                <h4>Harper Adams University</h4>
-                <p>Newport</p>
-                <p>Shropshire </p>
-                <p>TF10 8NB</p>
-                <ul>
-                    <li><a href="https://www.harper-adams.ac.uk/">harper-adams.ac.uk</a></li>
-                </ul>
-                <div class="social-icons">
-                    <a href="https://www.facebook.com/HarperAdams" target="_blank">
-                        <i class="fa-brands fa-facebook-f"></i>
-                    </a>
-                    <a href="https://www.instagram.com/HarperAdamsUni" target="_blank">
-                        <i class="fa-brands fa-instagram"></i>
-                    </a>
-                    <a href="https://www.tiktok.com/@harperadamsuniversity" target="_blank">
-                        <i class="fa-brands fa-tiktok"> </i>
-                    </a>
-                    <a href="https://www.linkedin.com/school/harper-adams-university/posts/?feedView=all" target="_blank">
-                        <i class="fa-brands fa-linkedin"></i>
-                    </a>
-                    <a href="https://vimeo.com/HarperAdams" target="_blank">
-                        <i class="fa-brands fa-vimeo"></i>
-                    </a>
-                </div>
-            </div>
-            <div class="card">
-                <h4>Harper Adams Future Farm</h4>
-                <ul>
-                    <li><a href="https://www.futurefarm.zone/">Future Farm Zone</a></li>
-                    <li><a href="mailto:futurefarmenquires@harper-adams.ac.uk">Contact the Future Farm</a></li>
-                </ul>
-                <div class="social-icons">
-                    <a href="https://www.facebook.com/profile.php?id=61573796195479&locale=en_GB" target="_blank">
-                        <i class="fa-brands fa-facebook-f"></i>
-                    </a>
-                    <a href="https://www.instagram.com/futurefarmhau/" target="_blank">
-                        <i class="fa-brands fa-instagram"></i>
-                    </a>
-                    <a href="https://www.tiktok.com/@futurefarmhau" target="_blank">
-                        <i class="fa-brands fa-tiktok"> </i>
-                    </a>
-                </div>
-            </div>
-            <div class="card">
-                <h4>AgriDat - Harper Adams Data Science</h4>
-                <ul>
-                    <li><a href="https://www.harper-adams.ac.uk/research/929/research-centre/agricultural-data-science/">Centre for Agricultural Data Science</a></li>
-                    <li><a href="mailto:agridat@harper-adams.ac.uk">Contact AgriDat</a></li>
-                </ul>
-                </ul>
-            </div>
-        </div>
-    </div>
-</footer>
+      </section>
 
-<!--JS scripts-->
-    <script></script>
-</body>
+      <!-- Data Categories -->
+      <section class="data-categories mb-3">
+        <div class="container">
+          <h3 class="text-xl text-center mb-3">Explore our data</h3>
+          <div class="grid-3 gap-1">
+            <a href="https://harperadams.farmmetrics.net/app/login?returnUrl=%2Fdashboard" target="_blank" class="card-link-wrapper">
+              <div class="card text-center">
+                <img src="./images/Crops-header.jpg" alt="Farm Data" class="card-img" />
+                <p class="text-lg">Farm Data <i class="fa-solid fa-up-right-from-square fa-2xs"></i></p>
+              </div>
+            </a>
+
+            <a href="https://hacarbon.github.io/dash/index.html#" target="_blank" class="card-link-wrapper">
+              <div class="card text-center">
+                <img src="./images/soils.jpg" alt="Carbon" class="card-img" />
+                <p class="text-lg">Carbon <i class="fa-solid fa-up-right-from-square fa-2xs"></i></p>
+              </div>
+            </a>
+
+            <a href="./pages/biodiversity.html" class="card-link-wrapper">
+              <div class="card text-center">
+                <img src="./images/HAU GR 3_00_20250305183508.jpg" alt="Biodiversity" class="card-img" />
+                <p class="text-lg">Biodiversity</p>
+              </div>
+            </a>
+
+            <a href="./pages/lte_exp.html" class="card-link-wrapper">
+              <div class="card text-center">
+                <img src="./images/combine.jpeg" alt="Long-term Experiments" class="card-img" />
+                <p class="text-lg">Long-term Experiments</p>
+              </div>
+            </a>
+
+            <a href="https://dataverse.harvard.edu/dataverse/Agridat" target="_blank" class="card-link-wrapper">
+              <div class="card text-center">
+                <img src="./images/trials picture 2.jpeg" alt="Harper Data Verse" class="card-img" />
+                <p class="text-lg">Harper Data Verse <i class="fa-solid fa-up-right-from-square fa-2xs"></i></p>
+              </div>
+            </a>
+
+            <a href="./pages/farmNetworks.html" class="card-link-wrapper">
+              <div class="card text-center">
+                <img src="./images/Student-outdoor-lecture.jpg" alt="Farm Networks" class="card-img" />
+                <p class="text-lg">Farm Networks</p>
+              </div>
+            </a>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <!-- Footer include -->
+    <div id="footer"></div>
+    <script>
+      fetch("./partials/footer.html")
+        .then((res) => res.text())
+        .then((html) => (document.getElementById("footer").innerHTML = html));
+    </script>
+  </body>
 </html>

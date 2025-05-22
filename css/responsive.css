@@ -1,0 +1,52 @@
+/* ===============================
+   Responsive Adjustments
+   =============================== */
+
+/* Small tablets & phones */
+@media (max-width: 768px) {
+  /* Grid layout: stack into one column */
+  .grid-3 {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 1.5rem;
+  }
+
+  /* Hero spacing */
+  .hero-content {
+    padding: 2rem 1rem;
+  }
+
+  /* Card text size */
+  .card p {
+    font-size: 1.1rem;
+  }
+
+  /* Reduce heading size */
+  .text-xxl {
+    font-size: 2rem;
+  }
+
+  .text-xl {
+    font-size: 1.5rem;
+  }
+
+  /* Adjust container padding if needed */
+  .container {
+    padding: 0 1rem;
+  }
+}
+
+/* Very small screens */
+@media (max-width: 480px) {
+  .text-xxl {
+    font-size: 1.6rem;
+  }
+
+  .text-lg {
+    font-size: 1.2rem;
+  }
+
+  .card p {
+    font-size: 1rem;
+  }
+}

@@ -1,415 +1,407 @@
 <!DOCTYPE html>
 <html>
-<head>
-<!--Metadata-->
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <!--Metadata-->
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-<!--Title and ico-->
+    <!--Title and ico-->
     <title>HAU Data Repository</title>
-    <link rel="shortcut icon" href="../../images/hau-logo.ico">
-<!-- Fonts and styling-->
+    <link rel="shortcut icon" href="../../images/hau-logo.ico" />
+    <!-- Fonts and styling-->
 
-    <link rel="stylesheet" href="../../css/style.css">
-    <link rel="stylesheet" href="../../css/lte.css">
-    <link rel="stylesheet" href="../../css/lte_project_metadata.css">
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
+    <link rel="stylesheet" href="./assets/css/fontawesome.min.css" />
+    <link rel="stylesheet" href="./assets/css/brands.min.css" />
 
-</head>
+    <link rel="stylesheet" href="../../css/style.css" />
+    <link rel="stylesheet" href="../../css/utilities.css" />
+    <link rel="stylesheet" href="../../css/pages/lte.css" />
+    <link rel="stylesheet" href="../../css/pages/lte-metadata.css" />
+  </head>
 
-<body>
-    
-<!-- Nav bar-->
-<nav class="navbar">
-    <div class="container">
-        <div class="logo">
-            <a href="../../index.html"></a>
-            <img src="../../images/HAU-logo.svg" alt="">
-        </div>
-        <div class="main-menu">
-            <ul>
-                <li>
-                    <a href="../../index.html">Home</a>
-                </li>
+  <body>
+    <!--navbar include -->
+    <div id="header"></div>
+    <script>
+      fetch("../../partials/header.html")
+        .then((res) => res.text())
+        .then((html) => {
+          const header = document.getElementById("header");
+          header.innerHTML = html;
 
-                <li>
-                    <a href="../../contribute.html">Contribute</a>
-                </li>
-                <li>
-                    <a href="../../faq.html">FAQ</a>
-                </li>
-            </ul>
-        </div>
-        <!--Hamburger button menu-->
-    </div>
-</nav>
+          // Manually load navbar.js after HTML is injected
+          const script = document.createElement("script");
+          script.src = "../../js/navbar.js";
+          script.onload = function () {
+            if (typeof initDropdownNav === "function") {
+              initDropdownNav();
+            } else {
+              console.error("initDropdownNav is not defined.");
+            }
+          };
+          document.body.appendChild(script);
+        });
+    </script>
 
-<section>
-    <div class="lte-metadata-container">
+    <section>
+      <div class="lte-metadata-container">
         <h2>Improving Soil and Crop Yeild sustainability with Controlled Traffic Farming and Low Pressure Systems</h2>
         <div class="lte-metadata-table">
-            <dl class="lte-intro">
-                <dt>Local Identifier</dt>
-                <dd>Traffic_Tillage</dd>
-                <!--    -->
-                <dt>Years Operational</dt>
-                <dd>October 2011 - <span class="italic"> present </span></dd>
-                <!--    -->
-                <dt>Objective</dt>
-                <dd>A multidisciplinary long-term project was established at Harper Adams University College (UK) in October 2011 to investigate the interaction between traffic and tillage on soil, crop and energy responses in a randomised and replicated study to determine the effects of Random Traffic Farming, Controlled Traffic Farming and Low Ground Pressure with conventional, minimum and zero tillage. The aim of this study is to develop an integrated mechanisation system to optimise soil and water resources, crop growth and yields and system performance and economics in commercial agricultural practice.</dd>
-                <!--    -->
-                <dt>Description</dt>
-                <dd>Agricultural production systems are increasingly characterised by extensive in-field trafficking of larger and heavier field machinery. The random nature of trafficking, covering 80-90% of the field area, that is characteristic of commercial practice inevitably leads to negative impacts on soil, water and crop characteristics as a result of degraded soil structures, impeded root development and water infiltration, yield losses and water pollution. Remedial action requires energy, time and cost. The future development of a sustainable agricultural sector needs to balance an increase in demand whilst protecting the environment. Emerging technologies and engineering solutions have stimulated a recent shift towards reduced tillage methods and coupled with the development of traffic management systems, aided by Precision Agriculture (PA), aim to reduce the severity of compaction on cropped areas whilst improving efficiency and sustainability. Controlled Traffic Farming (CTF) emanates from Australia and the United States of America where all field traffic travels on permanent wheel-ways, significantly reducing total area trafficked to c. 30% depending on working widths used. Low Ground Pressure (LGP) systems can facilitate random trafficking and are often used to access fields during wet conditions whilst minimising the negative effects of field traffic.</dd>
-                <!--    -->
-                <dt>Data Access Statement</dt>
-                <dd>Data is available... </dd>
-                <!--    -->
-                <dt>Data License</dt>
-                <dd>TBC </dd>
-                <!--    -->
-                <dt>Data URL</dt>
-                <dd>Link to harper dataverse eventually?</dd>
-                <!--    -->
-                <dt>Data Policy</dt>
-                <dd>Link to the harper research data policy & any project specific addtions</dd>
-                <!--    -->
-                <dt>Organizations</dt>
-                <dd>
-                    Harper Adams University
-                </dd>
-                <!--    -->
-                <dt>Persons</dt>
-                <dd>
-                    <table class="people">
-                        <thead>
-                            <tr>
-                                <th class="name">Name</th>
-                                <td class="role">Role</th>
-                            </tr>
-                        </thead>
-                        <tbody>
-                            <tr>
-                                <th scope="row">Dr. Paula Misiewicz</th>
-                                <td>Researcher</td>
-                            </tr>
-                            <tr>
-                                <th scope="row">David White</th>
-                                <td>Director of Study</td>
-                            </tr>
-                            <tr>
-                                <th scope="row">Professor Richard Godwin</th>
-                                <td>Advisor</td>
-                            </tr>
-                            <tr>
-                                <th scope="row">Dr. Anthony Millington</th>
-                                <td>Researcher</td>
-                            </tr>
-                            <tr>
-                                <th scope="row">Dr. Edward Dicken</th>
-                                <td>Advisor</td>
-                            </tr>
-                        </tbody>
-                    </table>
-                </dd>
-                <!--    -->
-                <dt>Funding Bodies</dt>
-                <dd>The Douglas Bomford Trust</dd>
-            </dl>
-            <h2>Site: Large Marsh Field - Trial Area</h2>
-            <dl class="lte-site-info">
-                <dt>Type</dt>
-                <dd></dd>
-                <!---->
-                <dt>Local Code</dt>
-                <dd>HAU_FF</dd>
-                <!---->
-                <dt>Location</dt>
-                <dd>
-                    <p>Harper Adams University Future Farm</p>
-                    <p>Edgmond, </p>
-                    <p>Shropshire, </p>
-                    <p>TF10 8NB</p>
-                </dd>
-                <!---->
-                <dt>Geographic Location</dt>
-                <dd>
-                    <p>55.779832, -2.425393</p>
-                    <img src="../../images/leaflet_map_placeholder.png" alt="">
-                </dd>
-                <!---->
-                <dt>Slope</dt>
-                <dd></dd>
-                <!---->
-                <dt>Visits Allowed?</dt>
-                <dd>By arrangement only</dd>
-                <!---->
-                <dt>Visiting Arrangements</dt>
-                <dd>Contact project lead: contact info</dd>
-                <!---->
-                <dt>History</dt>
-                <dd>
-                    <p>This site comprises a single trial area of 3.5ha situated in a larger field of 8ha total. The site is located on a mixed farm (Harper Adams Future Farm).</p>
-                    <p></p>
-                 </dd>
-                <!---->
-                <dt>Management</dt>
-                <dd>
-                    <p>A 3 x 3 factorial plot trial was established in 2012 in 4 randomised blocks.</p>
-                    <p>Traffic treatments were estblished based on intensity and frequency of trafficking detmined by Kroulik <span class="italic">et al</span>., (2009) and described in Smith <span class="italic">et al.,</span> (2013). Deep and shallow tillage cultivations were completed with a 4m wide V&auml;derstad Top Down and seeding of all plots used a V&auml;derstad Rapid.</p>
-                </dd>
-                <!---->
-                <dt>Soil Type</dt>
-                <dd>
-                    <p>Predominatly Claverley soil series</p>
-                    
-                    <ul class="list-inline">
-                        <p>Remainder of field consisting of:</p>
-                        <li>Stony sandy loams (Astley Hall, AH)</li>
-                        <li>clay laoms/sandy clay loams (Pinder, PN)</li>
-                        <li>Stony clay loams (Salop, SH)</li>
-                        <li>Stony sandy loam/loamy sand (Newport, Na)</li>
-                    </ul>
-                </dd>
-                <!---->
-                <dt>Soil Description</dt>
-                <dd>
-                    <p>
-                    Claverley soils: A very slightly stony sandy loam with commonly high water contents throughout winter and lateral drainage through upper soil profile from early spring.
-                    </p>
-                </dd>
-                <!---->
-                <dt>Soil Properties</dt>
-                <dd>
-                    <p>Table would go here!</p>
-                </dd>
-                <!---->
-                <dt>Climatic type</dt>
-                <dd>
-                    <p>Temperate oceanic (Cfb) </p>
-                    <p class="italic">Climate classification according to the <a class="inline-text-link" target="_blank" href="https://www.nature.com/articles/sdata2018214">Köppen climate classification system</a></p>
-                </dd>
-                <!---->
-                <dt>Climate Properties</dt>
-                <dd>
-                    <p>Coldest month averaging above 0&deg;C, all months with average temperatures below 22&deg;C, and at least 4 months averaging above 10&deg;C</p>
-                    <p>No significant precipitation difference between seasons</p>
-                </dd>
-                <!---->
-            </dl>
-            <h2>Design Period: 2012 - 2013 </h2>
-            <dl class="lte-design-period">
-                <dt>Design Type</dt>
-                <dd>Factorial plot trial</dd>
-                <!---->
-                <dt>Design Description</dt>
-                <dd>A 3 x 3 factorial plot trial was established in 2012 in 4 randomised blocks. All plots measured 4m in width and 84m in length</dd>
-                <!---->
-                <dt>Number of plots</dt>
-                <dd>4</dd>
-                <!---->
-                <dt>Number of subplots</dt>
-                <dd>36</dd>
-                <!---->
-                <dt>Number of replicates</dt>
-                <dd>9</dd>
-                <!---->
-                <dt>Number of harvests per year</dt>
-                <dd>1</dd>
-                <!---->
-                <dt>Crops</dt>
-                <dd>
-                    <table>
-                        <thead>
-                            <td>Time</td>
-                            <td>Crop</td>
-                        </thead>
-                        <tbody>
-                            <tr>
-                                <td>Harvest 2012</td>
-                                <td>Winter wheat (<span class="italic">Triticn aestivium</span> var. Duxford)</td>
-                            </tr>
-                            <tr>
-                                <td>November 2012</td>
-                                <td>Second winter wheat (<span class="italic">Triticn aestivium</span> var. Duxford)</td>
-                            </tr>
-                        </tbody>
-                    </table>
+          <!-- LTE Intro -->
+          <dl class="grid gap-2 mb-3">
+            <dt class="bold mb-1">Local Identifier</dt>
+            <dd class="mb-3">Traffic_Tillage</dd>
+            <!--    -->
+            <dt class="bold mb-1">Years Operational</dt>
+            <dd class="mb-3">October 2011 - <span class="italic"> present </span></dd>
+            <!--    -->
+            <dt class="bold mb-1">Objective</dt>
+            <dd class="mb-3">
+              A multidisciplinary long-term project was established at Harper Adams University College (UK) in October 2011 to investigate the
+              interaction between traffic and tillage on soil, crop and energy responses in a randomised and replicated study to determine the effects
+              of Random Traffic Farming, Controlled Traffic Farming and Low Ground Pressure with conventional, minimum and zero tillage. The aim of
+              this study is to develop an integrated mechanisation system to optimise soil and water resources, crop growth and yields and system
+              performance and economics in commercial agricultural practice.
+            </dd>
+            <!--    -->
+            <dt class="bold mb-1">Description</dt>
+            <dd class="mb-3">
+              Agricultural production systems are increasingly characterised by extensive in-field trafficking of larger and heavier field machinery.
+              The random nature of trafficking, covering 80-90% of the field area, that is characteristic of commercial practice inevitably leads to
+              negative impacts on soil, water and crop characteristics as a result of degraded soil structures, impeded root development and water
+              infiltration, yield losses and water pollution. Remedial action requires energy, time and cost. The future development of a sustainable
+              agricultural sector needs to balance an increase in demand whilst protecting the environment. Emerging technologies and engineering
+              solutions have stimulated a recent shift towards reduced tillage methods and coupled with the development of traffic management systems,
+              aided by Precision Agriculture (PA), aim to reduce the severity of compaction on cropped areas whilst improving efficiency and
+              sustainability. Controlled Traffic Farming (CTF) emanates from Australia and the United States of America where all field traffic
+              travels on permanent wheel-ways, significantly reducing total area trafficked to c. 30% depending on working widths used. Low Ground
+              Pressure (LGP) systems can facilitate random trafficking and are often used to access fields during wet conditions whilst minimising the
+              negative effects of field traffic.
+            </dd>
+            <!--    -->
+            <dt class="bold mb-1">Data Access Statement</dt>
+            <dd class="mb-3">Data is available...</dd>
+            <!--    -->
+            <dt class="bold mb-1">Data License</dt>
+            <dd class="mb-3">TBC</dd>
+            <!--    -->
+            <dt class="bold mb-1">Data URL</dt>
+            <dd class="mb-3">Link to harper dataverse eventually?</dd>
+            <!--    -->
+            <dt class="bold mb-1">Data Policy</dt>
+            <dd class="mb-3">Link to the harper research data policy & any project specific addtions</dd>
+            <!--    -->
+            <dt class="bold mb-1">Organizations</dt>
+            <dd>Harper Adams University</dd>
+            <!--    -->
+            <dt class="bold mb-1">Persons</dt>
+            <dd>
+              <table class="people">
+                <thead>
+                  <tr>
+                    <th class="name">Name</th>
+                    <td class="role">Role</td>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <th scope="row">Dr. Paula Misiewicz</th>
+                    <td>Researcher</td>
+                  </tr>
+                  <tr>
+                    <th scope="row">David White</th>
+                    <td>Director of Study</td>
+                  </tr>
+                  <tr>
+                    <th scope="row">Professor Richard Godwin</th>
+                    <td>Advisor</td>
+                  </tr>
+                  <tr>
+                    <th scope="row">Dr. Anthony Millington</th>
+                    <td>Researcher</td>
+                  </tr>
+                  <tr>
+                    <th scope="row">Dr. Edward Dicken</th>
+                    <td>Advisor</td>
+                  </tr>
+                </tbody>
+              </table>
+            </dd>
+            <!--    -->
+            <dt class="bold mb-1">Funding Bodies</dt>
+            <dd class="mb-3">The Douglas Bomford Trust</dd>
+          </dl>
+          <h2>Site: Large Marsh Field - Trial Area</h2>
+          <!-- LTE Site Info-->
+          <dl>
+            <dt class="bold mb-1">Type</dt>
+            <dd class="mb-3"></dd>
+            <!---->
+            <dt class="bold mb-1">Local Code</dt>
+            <dd class="mb-3">HAU_FF</dd>
+            <!---->
+            <dt class="bold mb-1">Location</dt>
+            <dd>
+              <p>Harper Adams University Future Farm</p>
+              <p>Edgmond,</p>
+              <p>Shropshire,</p>
+              <p>TF10 8NB</p>
+            </dd>
+            <!---->
+            <dt class="bold mb-1">Geographic Location</dt>
+            <dd>
+              <p>55.779832, -2.425393</p>
+              <img src="../../images/leaflet_map_placeholder.png" alt="" />
+            </dd>
+            <!---->
+            <dt class="bold mb-1">Slope</dt>
+            <dd class="mb-3"></dd>
+            <!---->
+            <dt class="bold mb-1">Visits Allowed?</dt>
+            <dd class="mb-3">By arrangement only</dd>
+            <!---->
+            <dt class="bold mb-1">Visiting Arrangements</dt>
+            <dd class="mb-3">Contact project lead: contact info</dd>
+            <!---->
+            <dt class="bold mb-1">History</dt>
+            <dd>
+              <p>
+                This site comprises a single trial area of 3.5ha situated in a larger field of 8ha total. The site is located on a mixed farm (Harper
+                Adams Future Farm).
+              </p>
+              <p></p>
+            </dd>
+            <!---->
+            <dt class="bold mb-1">Management</dt>
+            <dd>
+              <p>A 3 x 3 factorial plot trial was established in 2012 in 4 randomised blocks.</p>
+              <p>
+                Traffic treatments were estblished based on intensity and frequency of trafficking detmined by Kroulik
+                <span class="italic">et al</span>., (2009) and described in Smith <span class="italic">et al.,</span> (2013). Deep and shallow tillage
+                cultivations were completed with a 4m wide V&auml;derstad Top Down and seeding of all plots used a V&auml;derstad Rapid.
+              </p>
+            </dd>
+            <!---->
+            <dt class="bold mb-1">Soil Type</dt>
+            <dd>
+              <p>Predominatly Claverley soil series</p>
 
-                </dd>
-                <!---->
-                <dt>Crop Rotation</dt>
-                <dd></dd>
-                <!---->
-                <dt>Factors/Treatments</dt>
-                <dd>
-                    <table>
-                        <thead>
-                            <td>Treatment Name</td>
-                            <td>Treatment levels</td>
-                        </thead>
-                        <tbody>
-                            <tr>
-                                <td>Traffic Systems</td>
-                                <td>
-                                    <ul class="list-inline">
-                                        <li>Random Traffic Farming</li>
-                                        <li>Low Ground Pressure</li>
-                                        <li>Controlled Traffic Farming</li>
-                                    </ul>
-                                </td>
-                            </tr>
-                            <tr></tr>
-                            <tr></tr>
-                            <tr></tr>
-                            <tr>
-                                <td>
-                                    Tillage Systems
-                                </td>
-                                <td>
-                                    <ul class="list-inline">
-                                        <li>Deep Tillage (to a depth of 250mm)</li>
-                                        <li>Shallow Tillage (to a depth of 100mm)</li>
-                                        <li>Zero tillage</li>
-                                    </ul>
-                                </td>
-                            </tr>
-                        </tbody>
-                    </table>
-                </dd>
-                <!---->
-                <dt>Measurements</dt>
-                <dd>
-                    <table>
-                        <thead>
-                            <td>Variable</td>
-                            <td>Material</td>
-                            <td>Units</td>
-                            <td>Frequency</td>
-                            <td>Scale</td>
-                            <td>Comments</td>
-                        </thead>
-                        <tbody>
-                            <tr>
-                                <td>Penetrometer Resistance</td>
-                                <td></td>
-                                <td>MPa @ 100mm depth</td>
-                                <td>Once</td>
-                                <td></td>
-                                <td>Determined at 10mm intervals from soil surface to depth of 450mm using hydraulic ATV-mounted penetrometer</td>
-                            </tr>
-                            <tr>
-                                <td>Penetrometer Resistance</td>
-                                <td></td>
-                                <td>MPa @ 250mm depth</td>
-                                <td>Once</td>
-                                <td></td>
-                                <td>Determined at 10mm intervals from soil surface to depth of 450mm using hydraulic ATV-mounted penetrometer</td>
-                            </tr>
-                            <tr>
-                                <td>Water Infiltration</td>
-                                <td></td>
-                                <td>mm/hr</td>
-                                <td>Once</td>
-                                <td></td>
-                                <td>Simplified falling head method; Cylinder (152mm diameter, 150mm height, 2mm thickness) inserted into soil, duration of time for 600ml to drain into soil recorded</td>
-                            </tr>
-                            <tr>
-                                <td>Soil Water content</td>
-                                <td></td>
-                                <td>SMD</td>
-                                <td>Through May - July 2013</td>
-                                <td></td>
-                                <td>200 mm depth intervals between 0-800mm</td>
-                            </tr>
-                            <tr>
-                                <td>Crop Yeilds</td>
-                                <td></td>
-                                <td>t/ha</td>
-                                <td>Once</td>
-                                <td></td>
-                                <td>Yeilds determined by Claas Dominator 85 with 4-meter header bar at a forward speed of 5km/h. A sample of grain was obtained to measure moisture content</td>
-                            </tr>
-                        </tbody>
-                    </table>
-                </dd>
-                <!---->
-
-            </dl>
-            <div class="lte-rel-pubs">
-                <h2>Related Publications</h2>
-                <ul class="list-inline">
-                    <li>
-                        <a class="inline-text-link" href="https://elibrary.asabe.org/abstract.asp?aid=43751" target="_blank">Smith, E.K., Misiewicz, P.A., Chaney, K., White, D.R., Godwin, R.J. 2013. An investigation into the effect of traffic and tillage on soil properties and crop yields. ASABE Paper No. 1597846. Kansas City, Missouri.: ASABE. </a>
-                    </li>
-                    <li>
-                        <a class="inline-text-link" href="https://elibrary.asabe.org/abstract.asp?aid=44848" target="_blank">Smith, E.K., Misiewicz, P.A., Girardello, V., Arslan, S., Chaney, K., White, D.R., Godwin, R.J. 2014. Effects of traffic and tillage on crop yield (winter wheat <span class="italic">Triticum aestivium</span>) and the physical properties of a sandy loam. ASABE Paper No. 141912652. Kansas City, Missouri.: ASABE. </a>
-                    </li>
-                </ul>
-            </div>
+              <ul class="list-inline">
+                <p>Remainder of field consisting of:</p>
+                <li>Stony sandy loams (Astley Hall, AH)</li>
+                <li>clay laoms/sandy clay loams (Pinder, PN)</li>
+                <li>Stony clay loams (Salop, SH)</li>
+                <li>Stony sandy loam/loamy sand (Newport, Na)</li>
+              </ul>
+            </dd>
+            <!---->
+            <dt class="bold mb-1">Soil Description</dt>
+            <dd>
+              <p>
+                Claverley soils: A very slightly stony sandy loam with commonly high water contents throughout winter and lateral drainage through
+                upper soil profile from early spring.
+              </p>
+            </dd>
+            <!---->
+            <dt class="bold mb-1">Soil Properties</dt>
+            <dd>
+              <p>Table would go here!</p>
+            </dd>
+            <!---->
+            <dt class="bold mb-1">Climatic type</dt>
+            <dd>
+              <p>Temperate oceanic (Cfb)</p>
+              <p class="italic">
+                Climate classification according to the
+                <a class="inline-text-link" target="_blank" href="https://www.nature.com/articles/sdata2018214"
+                  >Köppen climate classification system</a
+                >
+              </p>
+            </dd>
+            <!---->
+            <dt class="bold mb-1">Climate Properties</dt>
+            <dd>
+              <p>
+                Coldest month averaging above 0&deg;C, all months with average temperatures below 22&deg;C, and at least 4 months averaging above
+                10&deg;C
+              </p>
+              <p>No significant precipitation difference between seasons</p>
+            </dd>
+            <!---->
+          </dl>
+          <h2>Design Period: 2012 - 2013</h2>
+          <dl class="lte-design-period">
+            <dt class="bold mb-1">Design Type</dt>
+            <dd class="mb-3">Factorial plot trial</dd>
+            <!---->
+            <dt class="bold mb-1">Design Description</dt>
+            <dd class="mb-3">
+              A 3 x 3 factorial plot trial was established in 2012 in 4 randomised blocks. All plots measured 4m in width and 84m in length
+            </dd>
+            <!---->
+            <dt class="bold mb-1">Number of plots</dt>
+            <dd class="mb-3">4</dd>
+            <!---->
+            <dt class="bold mb-1">Number of subplots</dt>
+            <dd class="mb-3">36</dd>
+            <!---->
+            <dt class="bold mb-1">Number of replicates</dt>
+            <dd class="mb-3">9</dd>
+            <!---->
+            <dt class="bold mb-1">Number of harvests per year</dt>
+            <dd class="mb-3">1</dd>
+            <!---->
+            <dt class="bold mb-1">Crops</dt>
+            <dd>
+              <table>
+                <thead>
+                  <td>Time</td>
+                  <td>Crop</td>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td>Harvest 2012</td>
+                    <td>Winter wheat (<span class="italic">Triticn aestivium</span> var. Duxford)</td>
+                  </tr>
+                  <tr>
+                    <td>November 2012</td>
+                    <td>Second winter wheat (<span class="italic">Triticn aestivium</span> var. Duxford)</td>
+                  </tr>
+                </tbody>
+              </table>
+            </dd>
+            <!---->
+            <dt class="bold mb-1">Crop Rotation</dt>
+            <dd class="mb-3"></dd>
+            <!---->
+            <dt class="bold mb-1">Factors/Treatments</dt>
+            <dd>
+              <table>
+                <thead>
+                  <td>Treatment Name</td>
+                  <td>Treatment levels</td>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td>Traffic Systems</td>
+                    <td>
+                      <ul class="list-inline">
+                        <li>Random Traffic Farming</li>
+                        <li>Low Ground Pressure</li>
+                        <li>Controlled Traffic Farming</li>
+                      </ul>
+                    </td>
+                  </tr>
+                  <tr></tr>
+                  <tr></tr>
+                  <tr></tr>
+                  <tr>
+                    <td>Tillage Systems</td>
+                    <td>
+                      <ul class="list-inline">
+                        <li>Deep Tillage (to a depth of 250mm)</li>
+                        <li>Shallow Tillage (to a depth of 100mm)</li>
+                        <li>Zero tillage</li>
+                      </ul>
+                    </td>
+                  </tr>
+                </tbody>
+              </table>
+            </dd>
+            <!---->
+            <dt class="bold mb-1">Measurements</dt>
+            <dd>
+              <table>
+                <thead>
+                  <td>Variable</td>
+                  <td>Material</td>
+                  <td>Units</td>
+                  <td>Frequency</td>
+                  <td>Scale</td>
+                  <td>Comments</td>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td>Penetrometer Resistance</td>
+                    <td></td>
+                    <td>MPa @ 100mm depth</td>
+                    <td>Once</td>
+                    <td></td>
+                    <td>Determined at 10mm intervals from soil surface to depth of 450mm using hydraulic ATV-mounted penetrometer</td>
+                  </tr>
+                  <tr>
+                    <td>Penetrometer Resistance</td>
+                    <td></td>
+                    <td>MPa @ 250mm depth</td>
+                    <td>Once</td>
+                    <td></td>
+                    <td>Determined at 10mm intervals from soil surface to depth of 450mm using hydraulic ATV-mounted penetrometer</td>
+                  </tr>
+                  <tr>
+                    <td>Water Infiltration</td>
+                    <td></td>
+                    <td>mm/hr</td>
+                    <td>Once</td>
+                    <td></td>
+                    <td>
+                      Simplified falling head method; Cylinder (152mm diameter, 150mm height, 2mm thickness) inserted into soil, duration of time for
+                      600ml to drain into soil recorded
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>Soil Water content</td>
+                    <td></td>
+                    <td>SMD</td>
+                    <td>Through May - July 2013</td>
+                    <td></td>
+                    <td>200 mm depth intervals between 0-800mm</td>
+                  </tr>
+                  <tr>
+                    <td>Crop Yeilds</td>
+                    <td></td>
+                    <td>t/ha</td>
+                    <td>Once</td>
+                    <td></td>
+                    <td>
+                      Yeilds determined by Claas Dominator 85 with 4-meter header bar at a forward speed of 5km/h. A sample of grain was obtained to
+                      measure moisture content
+                    </td>
+                  </tr>
+                </tbody>
+              </table>
+            </dd>
+            <!---->
+          </dl>
+          <div class="lte-rel-pubs">
+            <h2>Related Publications</h2>
+            <ul class="list-inline">
+              <li>
+                <a class="inline-text-link" href="https://elibrary.asabe.org/abstract.asp?aid=43751" target="_blank"
+                  >Smith, E.K., Misiewicz, P.A., Chaney, K., White, D.R., Godwin, R.J. 2013. An investigation into the effect of traffic and tillage
+                  on soil properties and crop yields. ASABE Paper No. 1597846. Kansas City, Missouri.: ASABE.
+                </a>
+              </li>
+              <li>
+                <a class="inline-text-link" href="https://elibrary.asabe.org/abstract.asp?aid=44848" target="_blank"
+                  >Smith, E.K., Misiewicz, P.A., Girardello, V., Arslan, S., Chaney, K., White, D.R., Godwin, R.J. 2014. Effects of traffic and
+                  tillage on crop yield (winter wheat <span class="italic">Triticum aestivium</span>) and the physical properties of a sandy loam.
+                  ASABE Paper No. 141912652. Kansas City, Missouri.: ASABE.
+                </a>
+              </li>
+            </ul>
+          </div>
         </div>
-        
+      </div>
+    </section>
 
-
-    </div>
-</section>
-
-<!-- Footer -->
-<footer class="footer bg-blue">
-    <div class="container">
-        <div class="footer-grid">
-            <div class="card">
-                <h4>Harper Adams University</h4>
-                <p>Newport</p>
-                <p>Shropshire </p>
-                <p>TF10 8NB</p>
-                <ul>
-                    <li><a href="https://www.harper-adams.ac.uk/">harper-adams.ac.uk</a></li>
-                </ul>
-                <div class="social-icons">
-                    <a href="https://www.facebook.com/HarperAdams" target="_blank">
-                        <i class="fa-brands fa-facebook-f"></i>
-                    </a>
-                    <a href="https://www.instagram.com/HarperAdamsUni" target="_blank">
-                        <i class="fa-brands fa-instagram"></i>
-                    </a>
-                    <a href="https://www.tiktok.com/@harperadamsuniversity" target="_blank">
-                        <i class="fa-brands fa-tiktok"> </i>
-                    </a>
-                    <a href="https://www.linkedin.com/school/harper-adams-university/posts/?feedView=all" target="_blank">
-                        <i class="fa-brands fa-linkedin"></i>
-                    </a>
-                    <a href="https://vimeo.com/HarperAdams" target="_blank">
-                        <i class="fa-brands fa-vimeo"></i>
-                    </a>
-                </div>
-            </div>
-            <div class="card">
-                <h4>Harper Adams Future Farm</h4>
-                <ul>
-                    <li><a href="https://www.futurefarm.zone/">Future Farm Zone</a></li>
-                    <li><a href="mailto:futurefarmenquires@harper-adams.ac.uk">Contact the Future Farm</a></li>
-                </ul>
-                <div class="social-icons">
-                    <a href="https://www.facebook.com/profile.php?id=61573796195479&locale=en_GB" target="_blank">
-                        <i class="fa-brands fa-facebook-f"></i>
-                    </a>
-                    <a href="https://www.instagram.com/futurefarmhau/" target="_blank">
-                        <i class="fa-brands fa-instagram"></i>
-                    </a>
-                    <a href="https://www.tiktok.com/@futurefarmhau" target="_blank">
-                        <i class="fa-brands fa-tiktok"> </i>
-                    </a>
-                </div>
-            </div>
-            <div class="card">
-                <h4>AgriDat - Harper Adams Data Science</h4>
-                <ul>
-                    <li><a href="https://www.harper-adams.ac.uk/research/929/research-centre/agricultural-data-science/">Centre for Agricultural Data Science</a></li>
-                    <li><a href="mailto:agridat@harper-adams.ac.uk">Contact AgriDat</a></li>
-                </ul>
-                </ul>
-            </div>
-        </div>
-    </div>
-</footer>
-</body>
+    <!-- Footer include -->
+    <div id="footer"></div>
+    <script>
+      fetch("../../partials/footer.html")
+        .then((res) => res.text())
+        .then((html) => (document.getElementById("footer").innerHTML = html));
+    </script>
+  </body>
 </html>

@@ -1,398 +1,342 @@
 <!DOCTYPE html>
 <html>
-<head>
-<!--Metadata-->
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <!--Metadata-->
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-<!--Title and ico-->
+    <!--Title and ico-->
     <title>HAU Data Repository</title>
-    <link rel="shortcut icon" href="../../images/hau-logo.ico">
-<!-- Fonts and styling-->
+    <link rel="shortcut icon" href="../../images/hau-logo.ico" />
+    <!-- Fonts and styling-->
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
+    <link rel="stylesheet" href="./assets/css/fontawesome.min.css" />
+    <link rel="stylesheet" href="./assets/css/brands.min.css" />
 
-    <link rel="stylesheet" href="../../css/style.css">
-    <link rel="stylesheet" href="../../css/lte.css">
-    <link rel="stylesheet" href="../../css/lte_project_metadata.css">
+    <link rel="stylesheet" href="../../css/style.css" />
+    <link rel="stylesheet" href="../../css/utilities.css" />
+    <link rel="stylesheet" href="../../css/responsive.css" />
+    <link rel="stylesheet" href="../../css/pages/lte.css" />
+    <link rel="stylesheet" href="../../css/pages/lte-metadata.css" />
+  </head>
 
-</head>
+  <body>
+    <!--navbar include -->
+    <div id="header"></div>
+    <script>
+      fetch("../../partials/header.html")
+        .then((res) => res.text())
+        .then((html) => {
+          const header = document.getElementById("header");
+          header.innerHTML = html;
 
-<body>
-    
-<!-- Nav bar-->
-<nav class="navbar">
-    <div class="container">
-        <div class="logo">
-            <a href="../../index.html"></a>
-            <img src="../../images/HAU-logo.svg" alt="">
-        </div>
-        <div class="main-menu">
-            <ul>
-                <li>
-                    <a href="../../index.html">Home</a>
-                </li>
+          // Manually load navbar.js after HTML is injected
+          const script = document.createElement("script");
+          script.src = "../../js/navbar.js";
+          script.onload = function () {
+            if (typeof initDropdownNav === "function") {
+              initDropdownNav();
+            } else {
+              console.error("initDropdownNav is not defined.");
+            }
+          };
+          document.body.appendChild(script);
+        });
+    </script>
 
-                <li>
-                    <a href="../../contribute.html">Contribute</a>
-                </li>
-                <li>
-                    <a href="../../faq.html">FAQ</a>
-                </li>
-            </ul>
-        </div>
-        <!--Hamburger button menu-->
-    </div>
-</nav>
-
-<section>
-    <div class="lte-metadata-container">
-        <h2>Project title here</h2>
-        <div class="lte-metadata-table">
+    <main>
+      <section>
+        <div class="lte-metadata-container">
+          <h2>Project title here</h2>
+          <div class="lte-metadata-table">
             <dl class="lte-intro">
-                <dt>Local Identifier</dt>
-                <dd>Local identifier here</dd>
-                <!--    -->
-                <dt>Years Operational</dt>
-                <dd>Dates here </span></dd>
-                <!--    -->
-                <dt>Objective</dt>
-                <dd>Objectives here</dd>
-                <!--    -->
-                <dt>Description</dt>
-                <dd>LTE project description here</dd>
-                <!--    -->
-                <dt>Data Access Statement</dt>
-                <dd>Data is available... </dd>
-                <!--    -->
-                <dt>Data License</dt>
-                <dd>TBC </dd>
-                <!--    -->
-                <dt>Data URL</dt>
-                <dd>Link to data here</dd>
-                <!--    -->
-                <dt>Data Policy</dt>
-                <dd>Link to the relevant data policy & any project specific addtions</dd>
-                <!--    -->
-                <dt>Organizations</dt>
-                <dd>
-                    Organisations here
-                </dd>
-                <!--    -->
-                <dt>Persons</dt>
-                <dd>
-                    <table class="people">
-                        <thead>
-                            <tr>
-                                <th class="name">Name</th>
-                                <td class="role">Role</th>
-                            </tr>
-                        </thead>
-                        <tbody>
-                            <tr>
-                                <th scope="row">name</th>
-                                <td>role</td>
-                            </tr>
-                            <tr>
-                                <th scope="row">name</th>
-                                <td>role</td>
-                            </tr>
-                            <tr>
-                                <th scope="row">name</th>
-                                <td>role</td>
-                            </tr>
-                            <tr>
-                                <th scope="row">name</th>
-                                <td>role</td>
-                            </tr>
-                            <tr>
-                                <th scope="row">name</th>
-                                <td>role</td>
-                            </tr>
-                        </tbody>
-                    </table>
-                </dd>
-                <!--    -->
-                <dt>Funding Bodies</dt>
-                <dd>Funding bodies here</dd>
+              <dt class="bold mb-1">Local Identifier</dt>
+              <dd class="mb-3">Local identifier here</dd>
+              <!--    -->
+              <dt class="bold mb-1">Years Operational</dt>
+              <dd class="mb-3">Dates here</dd>
+              <!--    -->
+              <dt class="bold mb-1">Objective</dt>
+              <dd class="mb-3">Objectives here</dd>
+              <!--    -->
+              <dt class="bold mb-1">Description</dt>
+              <dd class="mb-3">LTE project description here</dd>
+              <!--    -->
+              <dt class="bold mb-1">Data Access Statement</dt>
+              <dd class="mb-3">Data is available...</dd>
+              <!--    -->
+              <dt class="bold mb-1">Data License</dt>
+              <dd class="mb-3">TBC</dd>
+              <!--    -->
+              <dt class="bold mb-1">Data URL</dt>
+              <dd class="mb-3">Link to data here</dd>
+              <!--    -->
+              <dt class="bold mb-1">Data Policy</dt>
+              <dd class="mb-3">Link to the relevant data policy & any project specific addtions</dd>
+              <!--    -->
+              <dt class="bold mb-1">Organizations</dt>
+              <dd>Organisations here</dd>
+              <!--    -->
+              <dt class="bold mb-1">Persons</dt>
+              <dd>
+                <table class="people">
+                  <thead>
+                    <tr>
+                      <th class="name">Name</th>
+                      <td class="role">Role</td>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    <tr>
+                      <th scope="row">name</th>
+                      <td>role</td>
+                    </tr>
+                    <tr>
+                      <th scope="row">name</th>
+                      <td>role</td>
+                    </tr>
+                    <tr>
+                      <th scope="row">name</th>
+                      <td>role</td>
+                    </tr>
+                    <tr>
+                      <th scope="row">name</th>
+                      <td>role</td>
+                    </tr>
+                    <tr>
+                      <th scope="row">name</th>
+                      <td>role</td>
+                    </tr>
+                  </tbody>
+                </table>
+              </dd>
+              <!--    -->
+              <dt class="bold mb-1">Funding Bodies</dt>
+              <dd class="mb-3">Funding bodies here</dd>
             </dl>
             <h2>Site: LName here</h2>
             <dl class="lte-site-info">
-                <dt>Type</dt>
-                <dd></dd>
-                <!---->
-                <dt>Local Code</dt>
-                <dd>Local code here</dd>
-                <!---->
-                <dt>Location</dt>
-                <dd>
-                    <p>Street address</p>
-                    <p>Town here, </p>
-                    <p>County here, </p>
-                    <p>Postcode here</p>
-                </dd>
-                <!---->
-                <dt>Geographic Location</dt>
-                <dd>
-                    <p>Latitude and longitude</p>
-                    <img src="../../images/leaflet_map_placeholder.png" alt="">
-                </dd>
-                <!---->
-                <dt>Slope</dt>
-                <dd></dd>
-                <!---->
-                <dt>Visits Allowed?</dt>
-                <dd>By arrangement only</dd>
-                <!---->
-                <dt>Visiting Arrangements</dt>
-                <dd>Contact project lead: contact info</dd>
-                <!---->
-                <dt>History</dt>
-                <dd>
-                    <p>Site history here</p>
-                 </dd>
-                <!---->
-                <dt>Management</dt>
-                <dd>
-                    <p>Site management here</p>
-                </dd>
-                <!---->
-                <dt>Soil Type</dt>
-                <dd>
-                    <p>Predominatly soil series here</p>
-                    
-                    <ul class="list-inline">
-                        <p>Remainder of field consisting of:</p>
-                        <li>Soil type 1 (Soil series name, soils series name abb.)</li>
-                        <li>Soil type 2 (Soil series name, soils series name abb.)</li>
-                        <li>Soil type 3 (Soil series name, soils series name abb.)</li>
-                        <li>Soil type 4 (Soil series name, soils series name abb.)</li>
-                    </ul>
-                </dd>
-                <!---->
-                <dt>Soil Description</dt>
-                <dd>
-                    <p>
-                        Soil description here
-                    </p>
-                </dd>
-                <!---->
-                <dt>Soil Properties</dt>
-                <dd>
-                    <p>Table would go here!</p>
-                </dd>
-                <!---->
-                <dt>Climatic type</dt>
-                <dd>
-                    <p>Climatic type here </p>
-                    <p class="italic">Climate classification according to the <a class="inline-text-link" target="_blank" href="https://www.nature.com/articles/sdata2018214">Köppen climate classification system</a></p>
-                </dd>
-                <!---->
-                <dt>Climate Properties</dt>
-                <dd>
-                    <p>Climate properties go here</p>
-                    
-                </dd>
-                <!---->
+              <dt class="bold mb-1">Type</dt>
+              <dd class="mb-3"></dd>
+              <!---->
+              <dt class="bold mb-1">Local Code</dt>
+              <dd class="mb-3">Local code here</dd>
+              <!---->
+              <dt class="bold mb-1">Location</dt>
+              <dd>
+                <p>Street address</p>
+                <p>Town here,</p>
+                <p>County here,</p>
+                <p>Postcode here</p>
+              </dd>
+              <!---->
+              <dt class="bold mb-1">Geographic Location</dt>
+              <dd>
+                <p>Latitude and longitude</p>
+                <img src="../../images/leaflet_map_placeholder.png" alt="" />
+              </dd>
+              <!---->
+              <dt class="bold mb-1">Slope</dt>
+              <dd class="mb-3"></dd>
+              <!---->
+              <dt class="bold mb-1">Visits Allowed?</dt>
+              <dd class="mb-3">By arrangement only</dd>
+              <!---->
+              <dt class="bold mb-1">Visiting Arrangements</dt>
+              <dd class="mb-3">Contact project lead: contact info</dd>
+              <!---->
+              <dt class="bold mb-1">History</dt>
+              <dd>
+                <p>Site history here</p>
+              </dd>
+              <!---->
+              <dt class="bold mb-1">Management</dt>
+              <dd>
+                <p>Site management here</p>
+              </dd>
+              <!---->
+              <dt class="bold mb-1">Soil Type</dt>
+              <dd>
+                <p>Predominatly soil series here</p>
+
+                <ul class="list-inline">
+                  <p>Remainder of field consisting of:</p>
+                  <li>Soil type 1 (Soil series name, soils series name abb.)</li>
+                  <li>Soil type 2 (Soil series name, soils series name abb.)</li>
+                  <li>Soil type 3 (Soil series name, soils series name abb.)</li>
+                  <li>Soil type 4 (Soil series name, soils series name abb.)</li>
+                </ul>
+              </dd>
+              <!---->
+              <dt class="bold mb-1">Soil Description</dt>
+              <dd>
+                <p>Soil description here</p>
+              </dd>
+              <!---->
+              <dt class="bold mb-1">Soil Properties</dt>
+              <dd>
+                <p>Table would go here!</p>
+              </dd>
+              <!---->
+              <dt class="bold mb-1">Climatic type</dt>
+              <dd>
+                <p>Climatic type here</p>
+                <p class="italic">
+                  Climate classification according to the
+                  <a class="inline-text-link" target="_blank" href="https://www.nature.com/articles/sdata2018214"
+                    >Köppen climate classification system</a
+                  >
+                </p>
+              </dd>
+              <!---->
+              <dt class="bold mb-1">Climate Properties</dt>
+              <dd>
+                <p>Climate properties go here</p>
+              </dd>
+              <!---->
             </dl>
-            <h2>Design Period: 1 </h2>
+            <h2>Design Period: 1</h2>
             <dl class="lte-design-period">
-                <dt>Design Type</dt>
-                <dd>Design type goes here</dd>
-                <!---->
-                <dt>Design Description</dt>
-                <dd>Description goes here</dd>
-                <!---->
-                <dt>Number of plots</dt>
-                <dd>Number</dd>
-                <!---->
-                <dt>Number of subplots</dt>
-                <dd>Number</dd>
-                <!---->
-                <dt>Number of replicates</dt>
-                <dd>Number</dd>
-                <!---->
-                <dt>Number of harvests per year</dt>
-                <dd>Number</dd>
-                <!---->
-                <dt>Crops</dt>
-                <dd>
-                    <table>
-                        <thead>
-                            <td>Time</td>
-                            <td>Crop</td>
-                        </thead>
-                        <tbody>
-                            <tr>
-                                <td>Time 1</td>
-                                <td>Crop 1</td>
-                            </tr>
-                            <tr>
-                                <td>Time 2</td>
-                                <td>Crop 2</td>
-                            </tr>
-                        </tbody>
-                    </table>
-
-                </dd>
-                <!---->
-                <dt>Crop Rotation</dt>
-                <dd></dd>
-                <!---->
-                <dt>Factors/Treatments</dt>
-                <dd>
-                    <table>
-                        <thead>
-                            <td>Treatment Name</td>
-                            <td>Treatment levels</td>
-                        </thead>
-                        <tbody>
-                            <tr>
-                                <td>Treatment Name 1</td>
-                                <td>
-                                    <ul class="list-inline">
-                                        <li>Level 1</li>
-                                        <li>Level 2</li>
-                                        <li>Level 3 </li>
-                                    </ul>
-                                </td>
-                            </tr>
-                            <tr></tr>
-                            <tr></tr>
-                            <tr></tr>
-                            <tr>
-                                <td>
-                                    Treatment Name 2
-                                </td>
-                                <td>
-                                    <ul class="list-inline">
-                                        <li>Level 1</li>
-                                        <li>Level 2</li>
-                                        <li>Level 3 </li>
-                                    </ul>
-                                </td>
-                            </tr>
-                        </tbody>
-                    </table>
-                </dd>
-                <!---->
-                <dt>Measurements</dt>
-                <dd>
-                    <table>
-                        <thead>
-                            <td>Variable</td>
-                            <td>Material</td>
-                            <td>Units</td>
-                            <td>Frequency</td>
-                            <td>Scale</td>
-                            <td>Comments</td>
-                        </thead>
-                        <tbody>
-                            <tr>
-                                <td>Variable 1</td>
-                                <td>Material</td>
-                                <td>Units</td>
-                                <td>Frequency</td>
-                                <td>Scale</td>
-                                <td>Comments</td>
-                            </tr>
-                            <tr>
-                                <td>Variable 2</td>
-                                <td>Material</td>
-                                <td>Units</td>
-                                <td>Frequency</td>
-                                <td>Scale</td>
-                                <td>Comments</td>
-                            </tr>
-                            <tr>
-                                <td>Variable 3</td>
-                                <td>Material</td>
-                                <td>Units</td>
-                                <td>Frequency</td>
-                                <td>Scale</td>
-                                <td>Comments</td>
-                            </tr>
-                            
-                        </tbody>
-                    </table>
-                </dd>
-                <!---->
-
+              <dt class="bold mb-1">Design Type</dt>
+              <dd class="mb-3">Design type goes here</dd>
+              <!---->
+              <dt class="bold mb-1">Design Description</dt>
+              <dd class="mb-3">Description goes here</dd>
+              <!---->
+              <dt class="bold mb-1">Number of plots</dt>
+              <dd class="mb-3">Number</dd>
+              <!---->
+              <dt class="bold mb-1">Number of subplots</dt>
+              <dd class="mb-3">Number</dd>
+              <!---->
+              <dt class="bold mb-1">Number of replicates</dt>
+              <dd class="mb-3">Number</dd>
+              <!---->
+              <dt class="bold mb-1">Number of harvests per year</dt>
+              <dd class="mb-3">Number</dd>
+              <!---->
+              <dt class="bold mb-1">Crops</dt>
+              <dd>
+                <table>
+                  <thead>
+                    <td>Time</td>
+                    <td>Crop</td>
+                  </thead>
+                  <tbody>
+                    <tr>
+                      <td>Time 1</td>
+                      <td>Crop 1</td>
+                    </tr>
+                    <tr>
+                      <td>Time 2</td>
+                      <td>Crop 2</td>
+                    </tr>
+                  </tbody>
+                </table>
+              </dd>
+              <!---->
+              <dt class="bold mb-1">Crop Rotation</dt>
+              <dd class="mb-3"></dd>
+              <!---->
+              <dt class="bold mb-1">Factors/Treatments</dt>
+              <dd>
+                <table>
+                  <thead>
+                    <td>Treatment Name</td>
+                    <td>Treatment levels</td>
+                  </thead>
+                  <tbody>
+                    <tr>
+                      <td>Treatment Name 1</td>
+                      <td>
+                        <ul class="list-inline">
+                          <li>Level 1</li>
+                          <li>Level 2</li>
+                          <li>Level 3</li>
+                        </ul>
+                      </td>
+                    </tr>
+                    <tr></tr>
+                    <tr></tr>
+                    <tr></tr>
+                    <tr>
+                      <td>Treatment Name 2</td>
+                      <td>
+                        <ul class="list-inline">
+                          <li>Level 1</li>
+                          <li>Level 2</li>
+                          <li>Level 3</li>
+                        </ul>
+                      </td>
+                    </tr>
+                  </tbody>
+                </table>
+              </dd>
+              <!---->
+              <dt class="bold mb-1">Measurements</dt>
+              <dd>
+                <table>
+                  <thead>
+                    <td>Variable</td>
+                    <td>Material</td>
+                    <td>Units</td>
+                    <td>Frequency</td>
+                    <td>Scale</td>
+                    <td>Comments</td>
+                  </thead>
+                  <tbody>
+                    <tr>
+                      <td>Variable 1</td>
+                      <td>Material</td>
+                      <td>Units</td>
+                      <td>Frequency</td>
+                      <td>Scale</td>
+                      <td>Comments</td>
+                    </tr>
+                    <tr>
+                      <td>Variable 2</td>
+                      <td>Material</td>
+                      <td>Units</td>
+                      <td>Frequency</td>
+                      <td>Scale</td>
+                      <td>Comments</td>
+                    </tr>
+                    <tr>
+                      <td>Variable 3</td>
+                      <td>Material</td>
+                      <td>Units</td>
+                      <td>Frequency</td>
+                      <td>Scale</td>
+                      <td>Comments</td>
+                    </tr>
+                  </tbody>
+                </table>
+              </dd>
+              <!---->
             </dl>
             <div class="lte-rel-pubs">
-                <h2>Related Publications</h2>
-                <ul class="list-inline">
-                    <li>
-                        <a class="inline-text-link" href="" target="_blank">Citation </a>
-                    </li>
-                    <li>
-                        <a class="inline-text-link" href="" target="_blank">Citation </a>
-                    </li>
-                </ul>
+              <h2>Related Publications</h2>
+              <ul class="list-inline">
+                <li>
+                  <a class="inline-text-link" href="" target="_blank">Citation </a>
+                </li>
+                <li>
+                  <a class="inline-text-link" href="" target="_blank">Citation </a>
+                </li>
+              </ul>
             </div>
+          </div>
         </div>
-        
+      </section>
+    </main>
 
-
-    </div>
-</section>
-
-<!-- Footer -->
-<footer class="footer bg-blue">
-    <div class="container">
-        <div class="footer-grid">
-            <div class="card">
-                <h4>Harper Adams University</h4>
-                <p>Newport</p>
-                <p>Shropshire </p>
-                <p>TF10 8NB</p>
-                <ul>
-                    <li><a href="https://www.harper-adams.ac.uk/">harper-adams.ac.uk</a></li>
-                </ul>
-                <div class="social-icons">
-                    <a href="https://www.facebook.com/HarperAdams" target="_blank">
-                        <i class="fa-brands fa-facebook-f"></i>
-                    </a>
-                    <a href="https://www.instagram.com/HarperAdamsUni" target="_blank">
-                        <i class="fa-brands fa-instagram"></i>
-                    </a>
-                    <a href="https://www.tiktok.com/@harperadamsuniversity" target="_blank">
-                        <i class="fa-brands fa-tiktok"> </i>
-                    </a>
-                    <a href="https://www.linkedin.com/school/harper-adams-university/posts/?feedView=all" target="_blank">
-                        <i class="fa-brands fa-linkedin"></i>
-                    </a>
-                    <a href="https://vimeo.com/HarperAdams" target="_blank">
-                        <i class="fa-brands fa-vimeo"></i>
-                    </a>
-                </div>
-            </div>
-            <div class="card">
-                <h4>Harper Adams Future Farm</h4>
-                <ul>
-                    <li><a href="https://www.futurefarm.zone/">Future Farm Zone</a></li>
-                    <li><a href="mailto:futurefarmenquires@harper-adams.ac.uk">Contact the Future Farm</a></li>
-                </ul>
-                <div class="social-icons">
-                    <a href="https://www.facebook.com/profile.php?id=61573796195479&locale=en_GB" target="_blank">
-                        <i class="fa-brands fa-facebook-f"></i>
-                    </a>
-                    <a href="https://www.instagram.com/futurefarmhau/" target="_blank">
-                        <i class="fa-brands fa-instagram"></i>
-                    </a>
-                    <a href="https://www.tiktok.com/@futurefarmhau" target="_blank">
-                        <i class="fa-brands fa-tiktok"> </i>
-                    </a>
-                </div>
-            </div>
-            <div class="card">
-                <h4>AgriDat - Harper Adams Data Science</h4>
-                <ul>
-                    <li><a href="https://www.harper-adams.ac.uk/research/929/research-centre/agricultural-data-science/">Centre for Agricultural Data Science</a></li>
-                    <li><a href="mailto:agridat@harper-adams.ac.uk">Contact AgriDat</a></li>
-                </ul>
-                </ul>
-            </div>
-        </div>
-    </div>
-</footer>
-</body>
+    <!-- Footer include -->
+    <div id="footer"></div>
+    <script>
+      fetch("../../partials/footer.html")
+        .then((res) => res.text())
+        .then((html) => (document.getElementById("footer").innerHTML = html));
+    </script>
+  </body>
 </html>
