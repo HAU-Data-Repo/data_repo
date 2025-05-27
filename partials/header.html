@@ -1,27 +1,78 @@
 <nav class="navbar">
-  <div class="container flex justify-between align-center">
+  <div class="container-lg">
     <div class="logo">
       <a href="/index.html">
         <img src="/images/HAU-logo.svg" alt="Harper Adams Logo" />
       </a>
     </div>
     <div class="main-menu">
-      <ul class="flex">
+      <ul>
         <li><a href="/index.html">Home</a></li>
+
         <li class="dropdown">
-          <a href="#" class="dropdown-toggle" id="dataToggle">Data <i class="fa-solid fa-caret-down"></i></a>
+          <a href="#" class="dropdown-toggle">Data <i class="fa-solid fa-caret-down"></i></a>
           <ul class="dropdown-menu" id="dataDropdown">
-            <li><a href="https://harperadams.farmmetrics.net/app/login" target="_blank">Farm Data <i class="fa-solid fa-up-right-from-square fa-2xs"></i></a></li>
-            <li><a href="https://hacarbon.github.io/dash/index.html#" target="_blank">Carbon <i class="fa-solid fa-up-right-from-square fa-2xs"></i></a></li>
+            <li>
+              <a href="https://harperadams.farmmetrics.net/app/login" target="_blank" class="dropdown-child"
+                >Farm Data <i class="fa-solid fa-up-right-from-square fa-2xs"></i
+              ></a>
+            </li>
+            <li>
+              <a href="https://hacarbon.github.io/dash/index.html#" target="_blank" class="dropdown-child"
+                >Carbon <i class="fa-solid fa-up-right-from-square fa-2xs"></i
+              ></a>
+            </li>
+            <li>
+              <a href="/pages/biodiversity.html" class="dropdown-child">Biodiversity</a>
+            </li>
+            <li>
+              <a href="/pages/lte_exp.html" class="dropdown-child">Long-term Experiments</a>
+            </li>
+
+            <li>
+              <a href="#" target="_blank" class="dropdown-child">Harper Data Verse <i class="fa-solid fa-up-right-from-square fa-2xs"></i></a>
+            </li>
+            <li>
+              <a href="/pages/farmNetworks.html" class="dropdown-child">Farm Networks</a>
+            </li>
+          </ul>
+        </li>
+        <li><a href="#">Contribute</a></li>
+        <li><a href="#">FAQ</a></li>
+      </ul>
+    </div>
+    <!--Hamburger button-->
+    <button id="hamburger-button" class="hamburger-button">
+      <div class="hamburger-line"></div>
+      <div class="hamburger-line"></div>
+      <div class="hamburger-line"></div>
+    </button>
+    <div class="mobile-menu">
+      <ul>
+        <li><a href="/index.html">Home</a></li>
+
+        <li class="mobile-dropdown">
+          <a href="#" class="mobile-dropdown-toggle">Data <i class="fa-solid fa-caret-down"></i></a>
+          <ul class="mobile-dropdown-menu">
+            <li>
+              <a href="https://harperadams.farmmetrics.net/app/login" target="_blank"
+                >Farm Data <i class="fa-solid fa-up-right-from-square fa-2xs"></i
+              ></a>
+            </li>
+            <li>
+              <a href="https://hacarbon.github.io/dash/index.html#" target="_blank">Carbon <i class="fa-solid fa-up-right-from-square fa-2xs"></i></a>
+            </li>
             <li><a href="/pages/biodiversity.html">Biodiversity</a></li>
             <li><a href="/pages/lte_exp.html">Long-term Experiments</a></li>
-                      
-            <li><a href="#" target="_blank">Harper Data Verse <i class="fa-solid fa-up-right-from-square fa-2xs"></i></a></li>
+
+            <li>
+              <a href="#" target="_blank">Harper Data Verse <i class="fa-solid fa-up-right-from-square fa-2xs"></i></a>
+            </li>
             <li><a href="/pages/farmNetworks.html">Farm Networks</a></li>
           </ul>
         </li>
-        <li><a href="/contribute.html">Contribute</a></li>
-        <li><a href="/faq.html">FAQ</a></li>
+        <li><a href="#">Contribute</a></li>
+        <li><a href="#">FAQ</a></li>
       </ul>
     </div>
   </div>

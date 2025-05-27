@@ -24,27 +24,26 @@
   <body>
     <!--navbar include -->
     <div id="header"></div>
+    <!--navbar include -->
+    <div id="header"></div>
     <script>
       fetch("../../partials/header.html")
         .then((res) => res.text())
         .then((html) => {
-          const header = document.getElementById("header");
-          header.innerHTML = html;
+          document.getElementById("header").innerHTML = html;
 
-          // Manually load navbar.js after HTML is injected
           const script = document.createElement("script");
-          script.src = "../../js/navbar.js";
+          script.src = "../../js/main.js?v=3"; // cache-bust
           script.onload = function () {
-            if (typeof initDropdownNav === "function") {
-              initDropdownNav();
+            if (typeof initNavbar === "function") {
+              initNavbar();
             } else {
-              console.error("initDropdownNav is not defined.");
+              console.error("initNavbar not defined");
             }
           };
           document.body.appendChild(script);
         });
     </script>
-
     <section>
       <div class="lte-metadata-container">
         <h2>Improving Soil and Crop Yeild sustainability with Controlled Traffic Farming and Low Pressure Systems</h2>
