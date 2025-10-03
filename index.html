@@ -58,7 +58,7 @@
       <section class="data-categories mb-3">
         <div class="container">
           <h3 class="text-xl text-center mb-3">Explore our data</h3>
-          <div class="grid-3 gap-1">
+          <div class="grid-4 gap-1 mb-3">
             <a href="https://harperadams.farmmetrics.net/app/login?returnUrl=%2Fdashboard" target="_blank" class="card-link-wrapper">
               <div class="card text-center">
                 <img src="./images/Crops-header.jpg" alt="Farm Data" class="card-img" />
@@ -66,17 +66,10 @@
               </div>
             </a>
 
-            <a href="https://hacarbon.github.io/dash/index.html#" target="_blank" class="card-link-wrapper">
+            <a href="./pages/carbon_biodiversity.html" class="card-link-wrapper">
               <div class="card text-center">
                 <img src="./images/soils.jpg" alt="Carbon" class="card-img" />
-                <p class="text-lg">Carbon <i class="fa-solid fa-up-right-from-square fa-2xs"></i></p>
-              </div>
-            </a>
-
-            <a href="./pages/biodiversity.html" class="card-link-wrapper">
-              <div class="card text-center">
-                <img src="./images/HAU GR 3_00_20250305183508.jpg" alt="Biodiversity" class="card-img" />
-                <p class="text-lg">Biodiversity</p>
+                <p class="text-lg">Carbon and Biodiversity</p>
               </div>
             </a>
 
@@ -84,13 +77,6 @@
               <div class="card text-center">
                 <img src="./images/combine.jpeg" alt="Long-term Experiments" class="card-img" />
                 <p class="text-lg">Long-term Experiments</p>
-              </div>
-            </a>
-
-            <a href="https://dataverse.harvard.edu/dataverse/Agridat" target="_blank" class="card-link-wrapper">
-              <div class="card text-center">
-                <img src="./images/trials picture 2.jpeg" alt="Harper Data Verse" class="card-img" />
-                <p class="text-lg">Harper Data Verse <i class="fa-solid fa-up-right-from-square fa-2xs"></i></p>
               </div>
             </a>
 
@@ -106,7 +92,7 @@
     </main>
 
     <!-- Footer include -->
-    <div id="footer"></div>
+    <div id="footer" class="mt-3"></div>
     <script>
       fetch("./partials/footer.html")
         .then((res) => res.text())

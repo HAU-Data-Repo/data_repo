@@ -20,9 +20,11 @@ function initNavbar() {
   const dropdown = document.querySelector(".dropdown");
   if (dropdown) {
     dropdown.addEventListener("click", (e) => {
-      e.preventDefault();
-      e.stopPropagation();
-      dropdown.classList.toggle("active");
+      if (e.target.classList.contains("dropdown-toggle") || e.target.closest(".dropdown-toggle")) {
+        e.preventDefault();
+        e.stopPropagation();
+        dropdown.classList.toggle("active");
+      }
     });
 
     document.addEventListener("click", (e) => {
@@ -36,9 +38,11 @@ function initNavbar() {
   const mobileDropdown = document.querySelector(".mobile-dropdown");
   if (mobileDropdown) {
     mobileDropdown.addEventListener("click", (e) => {
-      e.preventDefault();
-      e.stopPropagation();
-      mobileDropdown.classList.toggle("active");
+      if (e.target.classList.contains("mobile-dropdown-toggle") || e.target.closest(".mobile-dropdown-toggle")) {
+        e.preventDefault();
+        e.stopPropagation();
+        mobileDropdown.classList.toggle("active");
+      }
     });
 
     document.addEventListener("click", (e) => {

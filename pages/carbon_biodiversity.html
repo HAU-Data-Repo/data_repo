@@ -1,19 +1,22 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
   <head>
-    <!--Metadata-->
+    <!-- Metadata -->
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="Explore the Future Farm Data & See What You Can Discover" />
+    <meta name="keywords" content="Future Farm, Harper Adams University, Data Portal, Data Repository" />
 
-    <!--Title and ico-->
+    <!-- Title and Icon -->
     <title>HAU Data Repository</title>
     <link rel="shortcut icon" href="../images/hau-logo.ico" />
-    <!-- Fonts and styling-->
+
     <!-- Font Awesome -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
-    <link rel="stylesheet" href="./assets/css/fontawesome.min.css" />
-    <link rel="stylesheet" href="./assets/css/brands.min.css" />
+    <link rel="stylesheet" href="../assets/css/fontawesome.min.css" />
+    <link rel="stylesheet" href="../assets/css/brands.min.css" />
 
+    <!-- CSS -->
     <link rel="stylesheet" href="../css/style.css" />
     <link rel="stylesheet" href="../css/utilities.css" />
     <link rel="stylesheet" href="../css/responsive.css" />
@@ -23,13 +26,13 @@
     <!--navbar include -->
     <div id="header"></div>
     <script>
-      fetch("../partials/header.html")
+      fetch("../../partials/header.html")
         .then((res) => res.text())
         .then((html) => {
           document.getElementById("header").innerHTML = html;
 
           const script = document.createElement("script");
-          script.src = "../js/main.js?v=3"; // cache-bust
+          script.src = "./js/main.js?v=3"; // cache-bust
           script.onload = function () {
             if (typeof initNavbar === "function") {
               initNavbar();
@@ -41,12 +44,15 @@
         });
     </script>
 
+    <main></main>
+
     <main>
       <!-- Hero -->
-      <section class="hero hero-sfn">
+      <section class="hero">
         <div class="container">
           <div class="hero-content text-center">
-            <h1 class="text-xxl mb-3">Harper Adams Farm Networks</h1>
+            <h1 class="text-xxl mb-2">Carbon and Biodiversity</h1>
+            <p class="text-md">Explore our carbon and biodiversity data</p>
           </div>
         </div>
       </section>
@@ -54,19 +60,19 @@
       <!-- Data Categories -->
       <section class="data-categories mb-3">
         <div class="container">
-          <h3 class="text-xl text-center mb-3">Explore our networks</h3>
-          <div class="grid-2 gap-1">
-            <a href="https://www.schoolofsustainablefoodandfarming.org/" target="_blank" class="card-link-wrapper">
+          <h3 class="text-xl text-center mb-3">Explore our data</h3>
+          <div class="grid-2 gap-1 mb-3">
+            <a href="../pages/carbon_biodiversity/carbon.html" class="card-link-wrapper">
               <div class="card text-center">
-                <img src="../images/220721-150436-Aerial-fields.jpg" class="card-img" />
-                <p class="text-lg text-center">School of Sustainable Food and Farming <i class="fa-solid fa-up-right-from-square fa-2xs"></i></p>
+                <img src="../images/soils.jpg" alt="Carbon" class="card-img" />
+                <p class="text-lg">Carbon</p>
               </div>
             </a>
 
-            <a href="https://www.schoolofsustainablefoodandfarming.org/953/sustainable-farm-networks/" target="_blank" class="card-link-wrapper">
+            <a href="../pages/carbon_biodiversity/biodiversity.html" class="card-link-wrapper">
               <div class="card text-center">
-                <img src="../images/aerial_fields_green.jpg" alt="" class="card-img" />
-                <p class="text-lg text-center">Sustainable Farm Networks <i class="fa-solid fa-up-right-from-square fa-2xs"></i></p>
+                <img src="../images/sandra-seitamaa-2VmPsHzI5aY-unsplash.jpg" alt="Long-term Experiments" class="card-img" />
+                <p class="text-lg">Biodiversity</p>
               </div>
             </a>
           </div>
@@ -75,7 +81,7 @@
     </main>
 
     <!-- Footer include -->
-    <div id="footer"></div>
+    <div id="footer" class="mt-3"></div>
     <script>
       fetch("../partials/footer.html")
         .then((res) => res.text())

@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <!--Metadata-->
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <!--Title and ico-->
+    <title>HAU Data Repository</title>
+    <link rel="shortcut icon" href="../../images/hau-logo.ico" />
+    <!-- Fonts and styling-->
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
+    <link rel="stylesheet" href="./assets/css/fontawesome.min.css" />
+    <link rel="stylesheet" href="./assets/css/brands.min.css" />
+
+    <link rel="stylesheet" href="../../css/style.css" />
+    <link rel="stylesheet" href="../../css/utilities.css" />
+    <link rel="stylesheet" href="../../css/responsive.css" />
+    <link rel="stylesheet" href="../../css/pages/pillar2.css" />
+  </head>
+
+  <body>
+    <!--navbar include -->
+    <div id="header"></div>
+    <script>
+      fetch("../../partials/header.html")
+        .then((res) => res.text())
+        .then((html) => {
+          document.getElementById("header").innerHTML = html;
+
+          const script = document.createElement("script");
+          script.src = "../../js/main.js?v=3"; // cache-bust
+          script.onload = function () {
+            if (typeof initNavbar === "function") {
+              initNavbar();
+            } else {
+              console.error("initNavbar not defined");
+            }
+          };
+          document.body.appendChild(script);
+        });
+    </script>
+
+    <main>
+      <!-- Hero -->
+      <section class="hero hero-carbon">
+        <div class="container">
+          <div class="hero-content">
+            <h1 class="hero-heading text-xxl text-center">Harper Adams Carbon Auditing</h1>
+          </div>
+        </div>
+      </section>
+      <!-- Main content -->
+
+      <section class="project-content">
+        <div class="project-main">
+          <div class="project-main-header">
+            <h2 class="projectTitle text-xl">Sustainable Net Zero Carbon</h2>
+          </div>
+          <div class="project-main-body text-md mx-2">
+            <h3 class="mt-3">Mission</h3>
+            <p>
+              We are on a mission to reach sustainable net zero carbon by improving efficiency, reducing dependence on thermogenic input sources and
+              increasing the circularity of biogenic sources through the return of atmospheric carbon to the soil and plant biomass. We aim to deliver
+              this in conjunction with other sustainability parameters (e.g., economic, biodiversity) and will aim to achieve this by intergrating the
+              view point of academics into the direction and strategy of the farm.
+            </p>
+            <h3 class="mt-3">Purpose</h3>
+            <p>
+              The impact of climate change is already being seen on farms across the United Kingdom. Extreme weather events are expected to continue,
+              with severe droughts and torrential flooding becoming more common. Any steps we can take as a farm to mitigate climate change will
+              benefit the local community and wider agricultural indsutry.
+            </p>
+            <p>
+              Working alongside industry to form strategic alliances, the Harper Adams Future Farm aims to lead the way, ensuring the industry can
+              learn from our achievements and mistakes. We will work with the School of Sustainable Food and Farmer to publicise our journey to
+              sustainable net zero.
+            </p>
+            <div class="grid-2">
+              <div>
+                <h3 class="mt-3">Vision</h3>
+                <h4 class="italic">Utilising Techonology</h4>
+                <ul class="mx-3">
+                  <li>Increasing solar PV and the potential of anaerobic digestion and bio-refinery</li>
+                  <li>Increasing sensor monitoring to all sectors</li>
+                  <li>Developing metrics and sensors for the assessment of biodiversity</li>
+                </ul>
+                <h4 class="italic mt-2">Deploying Science</h4>
+                <ul class="mx-3">
+                  <li>Using genetic advances to increase productivity</li>
+                  <li>Using feed additives to reduce enteric fermentation</li>
+                  <li>Investigating the capture and compression of fugitive methane as a tractor fuel</li>
+                  <li>Nutrient stripping of slurry and dewatering technologies to minimise compaction and allow precision applications</li>
+                </ul>
+                <h4 class="italic mt-2">Protecting the Environment</h4>
+                <ul class="mx-3">
+                  <li>Optimise the use of water and electric through meters</li>
+                  <li>Increasing the area of legumes in the crop rotation and reduce organic fertiliser application</li>
+                  <li>Selecting low embedded emission fertilisers when needed</li>
+                  <li>Reducing fuel use by reducing cultivation intensity, enhanced automation and alternative fuel types</li>
+                  <li>Focused management around the reduction of emissions of all greenhouse gases and ammonia across all operations</li>
+                  <li>Focused management on biodiversity net gain across the Harper Adams Future Farm</li>
+                </ul>
+              </div>
+              <img src="../../images/cows.jpg" alt="" class="my-3 mx-auto rounded" />
+            </div>
+          </div>
+        </div>
+        <div class="project-aside">
+          <div class="project-aside-content">
+            <div class="aside-group">
+              <a href="https://hacarbon.github.io/dash/index.html#" target="_blank" class="card-link-wrapper">
+                <div class="card-dark text-center mt-2">
+                  <img src="../../images/soils.jpg" alt="Carbon" class="card-img" />
+                  <p class="text-lg">Visit the Data Dashboard</p>
+                </div>
+              </a>
+            </div>
+            <div class="aside-group">
+              <h4 class="text-lg">AgreCalc Reports</h4>
+              <ul class="mx-2">
+                <li class="mx-2 text-md">HAU Future Farm 2024 <span class="italic">(Coming soon)</span></li>
+                <li class="mx-2 text-md">HAU Future Farm 2023 <span class="italic">(Coming soon)</span></li>
+                <li class="mx-2 text-md">HAU Future Farm 2022 <span class="italic">(Coming soon)</span></li>
+              </ul>
+            </div>
+            <div class="aside-group">
+              <h4 class="text-lg">Metadata</h4>
+              <p class="text-md">
+                <a href="../lte_project_metadata/HandsFreeFarm_MetaData.html" target="_blank">
+                  Project metadata <span class="italic">(Coming soon)</span> <i class="fa-solid fa-up-right-from-square fa-2xs icon-dark"></i
+                ></a>
+              </p>
+            </div>
+            <div class="aside-group">
+              <h4 class="text-lg">Related Publications</h4>
+              <p class="text-md"></p>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+    <!-- Footer include -->
+    <div id="footer"></div>
+    <script>
+      fetch("../../partials/footer.html")
+        .then((res) => res.text())
+        .then((html) => (document.getElementById("footer").innerHTML = html));
+    </script>
+    <!--JS scripts-->
+    <script></script>
+  </body>
+</html>

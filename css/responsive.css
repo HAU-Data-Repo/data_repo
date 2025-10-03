@@ -4,10 +4,23 @@
 
 /* Small tablets & phones */
 @media (max-width: 768px) {
+  .navbar .main-menu {
+    display: none;
+  }
+
+  .navbar .hamburger-button {
+    display: block;
+  }
   /* Grid layout: stack into one column */
   .grid-3 {
     display: grid;
-    grid-template-columns: 1fr;
+    grid-template-columns: 1fr 1fr;
+    gap: 1.5rem;
+  }
+
+  .grid-4 {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
     gap: 1.5rem;
   }
 
@@ -15,7 +28,14 @@
   .hero-content {
     padding: 2rem 1rem;
   }
+  /* Adjust card image size */
+  .data-categories .card-img {
+    height: 25vw;
+  }
 
+  .grid-2 .card .card-img {
+    height: 40vw;
+  }
   /* Card text size */
   .card p {
     font-size: 1.1rem;
@@ -34,10 +54,38 @@
   .container {
     padding: 0 1rem;
   }
+
+  /* Footer adjustments */
+  .footer-grid {
+    grid-template-columns: 1fr;
+    text-align: center;
+  }
 }
 
-/* Very small screens */
+/* Very small screens i.e. phones */
 @media (max-width: 480px) {
+  .grid-2 {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 1rem;
+  }
+
+  .grid-3 {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 1rem;
+  }
+
+  .grid-4 {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 1rem;
+  }
+
+  .data-categories .card-img {
+    height: 50vw;
+  }
+
   .text-xxl {
     font-size: 1.6rem;
   }
